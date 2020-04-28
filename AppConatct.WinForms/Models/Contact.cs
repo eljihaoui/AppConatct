@@ -29,5 +29,14 @@ namespace AppConatct.WinForms.Models
         {
 
         }
+        public Contact( DateTime dateNaiss, string email, string tel, string genre, string urlPhoto)
+        {
+            this.DateNaiss = dateNaiss;
+            this.Email = email;
+            this.Tel = tel;
+            this.Genre = genre;
+            this.UrlPhoto = urlPhoto;
+        }
+
     }
 }
