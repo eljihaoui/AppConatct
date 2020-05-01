@@ -46,16 +46,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu.cs">
+    <Compile Include="frmAddContact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmAddContact.Designer.cs">
+      <DependentUpon>frmAddContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListContact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmListContact.Designer.cs">
+      <DependentUpon>frmListContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\DBContact.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddContact.resx">
+      <DependentUpon>frmAddContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListContact.resx">
+      <DependentUpon>frmListContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
