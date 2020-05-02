@@ -19,7 +19,7 @@ namespace AppConatct.WinForms.Models
             return c.Id;
         }
         // Récuperer  la liste des contacts
-        public static  List<Contact> GetLsitContacts()
+        public static  List<Contact> GetListContacts()
         {
             return lstContacts;
         }

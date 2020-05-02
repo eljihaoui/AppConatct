@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppConatct.WinForms.Models;
 
 namespace AppConatct.WinForms
 {
@@ -15,6 +16,16 @@ namespace AppConatct.WinForms
         public frmListContact()
         {
             InitializeComponent();
+        }
+
+        private void frmListContact_Load(object sender, EventArgs e)
+        {
+            BindingList<Contact> lst = new BindingList<Contact>(DBContact.GetListContacts());
+            dgvContacts.DataSource = lst;
+            dgvContacts.AutoResizeColumns();
+            dgvContacts.AllowUserToResizeColumns = true;
+            dgvContacts.AllowUserToOrderColumns = true;
+            dgvContacts.Columns["photo"].Visible = false;
         }
     }
 }
