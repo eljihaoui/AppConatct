@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.nbContact = new System.Windows.Forms.Label();
             this.dgvContacts = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).BeginInit();
@@ -58,14 +58,14 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Liste Contact";
             // 
-            // label2
+            // nbContact
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(430, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.nbContact.AutoSize = true;
+            this.nbContact.Location = new System.Drawing.Point(430, 11);
+            this.nbContact.Name = "nbContact";
+            this.nbContact.Size = new System.Drawing.Size(53, 20);
+            this.nbContact.TabIndex = 4;
+            this.nbContact.Text = "label2";
             // 
             // dgvContacts
             // 
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.dgvContacts);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.nbContact);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,7 +106,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label nbContact;
         private System.Windows.Forms.DataGridView dgvContacts;
     }
 }
