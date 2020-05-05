@@ -32,5 +32,25 @@ namespace AppConatct.WinForms
 
 
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearch.Text != "")
+            {
+                var lst = new BindingList<Contact>(DBContact.SearchConatct(txtSearch.Text));
+                dgvContacts.DataSource = lst;
+            }
+            else
+            {
+                var lst = new BindingList<Contact>( DBContact.GetListContacts());
+                dgvContacts.DataSource = lst;
+            }
+            nbContact.Text = "Nombre Contact :" + dgvContacts.Rows.Count;
+        }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            btnSearch_Click(sender, e);
+        }
     }
 }
