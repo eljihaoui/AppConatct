@@ -115,14 +115,14 @@
             this.pContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pContent.Location = new System.Drawing.Point(189, 0);
             this.pContent.Name = "pContent";
-            this.pContent.Size = new System.Drawing.Size(716, 600);
+            this.pContent.Size = new System.Drawing.Size(781, 600);
             this.pContent.TabIndex = 1;
             // 
             // frmMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(905, 600);
+            this.ClientSize = new System.Drawing.Size(970, 600);
             this.Controls.Add(this.pContent);
             this.Controls.Add(this.pMenu);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
