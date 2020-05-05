@@ -26,6 +26,7 @@ namespace AppConatct.WinForms
             dgvContacts.AllowUserToResizeColumns = true;
             dgvContacts.AllowUserToOrderColumns = true;
             dgvContacts.Columns["photo"].Visible = false;
+            //dgvContacts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvContacts.AllowUserToAddRows = false;
             nbContact.Text = "Nombre Contact : " + dgvContacts.Rows.Count;
 
