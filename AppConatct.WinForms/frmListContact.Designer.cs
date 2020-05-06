@@ -37,7 +37,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnUpload = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnUpdae = new System.Windows.Forms.Button();
             this.txtPictureContact = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.MaskedTextBox();
@@ -129,6 +129,7 @@
             this.btnUpload.Text = "  Parcourir ...";
             this.btnUpload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // btnDelete
             // 
@@ -136,27 +137,29 @@
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(470, 428);
+            this.btnDelete.Location = new System.Drawing.Point(470, 437);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(132, 40);
+            this.btnDelete.Size = new System.Drawing.Size(132, 41);
             this.btnDelete.TabIndex = 26;
             this.btnDelete.Text = "Supprimer";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnSave
+            // btnUpdae
             // 
-            this.btnSave.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(313, 428);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(120, 40);
-            this.btnSave.TabIndex = 25;
-            this.btnSave.Text = "Modifer";
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnUpdae.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnUpdae.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnUpdae.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdae.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdae.Image")));
+            this.btnUpdae.Location = new System.Drawing.Point(313, 437);
+            this.btnUpdae.Name = "btnUpdae";
+            this.btnUpdae.Size = new System.Drawing.Size(120, 41);
+            this.btnUpdae.TabIndex = 25;
+            this.btnUpdae.Text = "Modifer";
+            this.btnUpdae.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdae.UseVisualStyleBackColor = false;
+            this.btnUpdae.Click += new System.EventHandler(this.btnUpdae_Click);
             // 
             // txtPictureContact
             // 
@@ -278,7 +281,7 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnUpdae);
             this.Controls.Add(this.txtPictureContact);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTel);
@@ -319,7 +322,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnUpdae;
         private System.Windows.Forms.PictureBox txtPictureContact;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox txtTel;

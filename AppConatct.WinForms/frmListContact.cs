@@ -82,5 +82,65 @@ namespace AppConatct.WinForms
 
             }
         }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fd = new OpenFileDialog();
+            fd.Filter = "Image Files(*.jpg; *.gif; *.jpeg; *.bmp; *.png)| *.jpg; *.gif; *.jpeg; *.bmp; *.png";
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                txtPictureContact.Image = new Bitmap(fd.FileName);
+            }
+        }
+
+        private void btnUpdae_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text != "")
+            {
+                Contact c = new Contact();
+                c.Id = Int32.Parse( txtID.Text);
+                c.NomComplet = txtNom.Text;
+                c.Email = txtEmail.Text;
+                c.Genre = txtGenre.Text;
+                c.Tel = txtTel.Text;
+                c.DateNaiss = txtDateNaiss.Value.Date;
+                MemoryStream ms = new MemoryStream();
+                txtPictureContact.Image.Save(ms, txtPictureContact.Image.RawFormat);
+                byte[] img = ms.ToArray();
+                c.Photo = img;
+                DBContact.UpdateContact(c);
+                var lst = new BindingList<Contact>(DBContact.GetListContacts());
+                dgvContacts.DataSource = lst;
+                MessageBox.Show(
+                    "Contact Bien Modifié",
+                    "Modification", 
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                    );
+
+
+
+
+
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text != "")
+            {
+                DialogResult res = MessageBox.Show(
+                    "Voulez vous vraiment supprimer ce contact",
+                    "supprisson",MessageBoxButtons.YesNo,MessageBoxIcon.Warning
+                    );
+                if (res == DialogResult.Yes)
+                {
+                    DBContact.DeleteContact(Int32.Parse(txtID.Text));
+                    var lst = new BindingList<Contact>(DBContact.GetListContacts());
+                    dgvContacts.DataSource = lst;
+                }
+                nbContact.Text = "Nombre Contact :" + dgvContacts.Rows.Count;
+            }
+        }
     }
 }
