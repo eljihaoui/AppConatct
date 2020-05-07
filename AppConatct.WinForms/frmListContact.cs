@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppConatct.WinForms.Models;
 using System.IO;
+using Microsoft.Reporting.WinForms;
 
 namespace AppConatct.WinForms
 {
@@ -43,7 +44,7 @@ namespace AppConatct.WinForms
             }
             else
             {
-                var lst = new BindingList<Contact>( DBContact.GetListContacts());
+                var lst = new BindingList<Contact>(DBContact.GetListContacts());
                 dgvContacts.DataSource = lst;
             }
             nbContact.Text = "Nombre Contact :" + dgvContacts.Rows.Count;
@@ -64,10 +65,10 @@ namespace AppConatct.WinForms
                 txtNom.Text = dgvContacts.Rows[index].Cells[1].Value.ToString();
                 string txtdate = dgvContacts.Rows[index].Cells[2].Value.ToString();
                 txtDateNaiss.Text = DateTime.Parse(txtdate).ToString("dd/MM/yyyy");
-                txtEmail.Text= dgvContacts.Rows[index].Cells[3].Value.ToString();
+                txtEmail.Text = dgvContacts.Rows[index].Cells[3].Value.ToString();
                 txtTel.Text = dgvContacts.Rows[index].Cells[4].Value.ToString();
                 txtGenre.Text = dgvContacts.Rows[index].Cells[5].Value.ToString();
-                byte[] img = (byte [])dgvContacts.Rows[index].Cells[6].Value;
+                byte[] img = (byte[])dgvContacts.Rows[index].Cells[6].Value;
                 if (img != null)
                 {
                     MemoryStream ms = new MemoryStream(img);
@@ -98,7 +99,7 @@ namespace AppConatct.WinForms
             if (txtID.Text != "")
             {
                 Contact c = new Contact();
-                c.Id = Int32.Parse( txtID.Text);
+                c.Id = Int32.Parse(txtID.Text);
                 c.NomComplet = txtNom.Text;
                 c.Email = txtEmail.Text;
                 c.Genre = txtGenre.Text;
@@ -113,7 +114,7 @@ namespace AppConatct.WinForms
                 dgvContacts.DataSource = lst;
                 MessageBox.Show(
                     "Contact Bien Modifié",
-                    "Modification", 
+                    "Modification",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
                     );
@@ -131,16 +132,36 @@ namespace AppConatct.WinForms
             {
                 DialogResult res = MessageBox.Show(
                     "Voulez vous vraiment supprimer ce contact",
-                    "supprisson",MessageBoxButtons.YesNo,MessageBoxIcon.Warning
+                    "supprisson", MessageBoxButtons.YesNo, MessageBoxIcon.Warning
                     );
                 if (res == DialogResult.Yes)
                 {
                     DBContact.DeleteContact(Int32.Parse(txtID.Text));
                     var lst = new BindingList<Contact>(DBContact.GetListContacts());
                     dgvContacts.DataSource = lst;
+                    nbContact.Text = "Nombre Contact :" + dgvContacts.Rows.Count;
+
                 }
-                nbContact.Text = "Nombre Contact :" + dgvContacts.Rows.Count;
             }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            ReportDataSource rs = new ReportDataSource();
+            rs.Name = "DataSetListContact";
+            rs.Value = DBContact.SearchConatct(txtSearch.Text);
+            frmPrint frm = new frmPrint();
+            frm.Rpv.LocalReport.DataSources.Clear();
+            frm.Rpv.LocalReport.DataSources.Add(rs);
+            frm.Rpv.LocalReport.ReportEmbeddedResource = "AppConatct.WinForms.RpListContact.rdlc";
+           // frm.Rpv.LocalReport.ReportEmbeddedResource = "AppConatct.WinForms.Fiche.rdlc";
+            
+            frm.Rpv.Dock = DockStyle.Fill;
+            frm.Controls.Add(frm.Rpv);
+            frm.Rpv.RefreshReport();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.ShowDialog();
         }
     }
 }

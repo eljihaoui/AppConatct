@@ -29,16 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListContact));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.nbContact = new System.Windows.Forms.Label();
             this.dgvContacts = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnUpload = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdae = new System.Windows.Forms.Button();
-            this.txtPictureContact = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,20 +45,17 @@
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdae = new System.Windows.Forms.Button();
+            this.txtPictureContact = new System.Windows.Forms.PictureBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPictureContact)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -102,74 +93,6 @@
             this.txtSearch.Size = new System.Drawing.Size(149, 31);
             this.txtSearch.TabIndex = 6;
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(165, 47);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(44, 31);
-            this.btnSearch.TabIndex = 7;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btnUpload
-            // 
-            this.btnUpload.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnUpload.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Image = ((System.Drawing.Image)(resources.GetObject("btnUpload.Image")));
-            this.btnUpload.Location = new System.Drawing.Point(13, 456);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(160, 42);
-            this.btnUpload.TabIndex = 27;
-            this.btnUpload.Text = "  Parcourir ...";
-            this.btnUpload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUpload.UseVisualStyleBackColor = false;
-            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Bisque;
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(470, 437);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(132, 41);
-            this.btnDelete.TabIndex = 26;
-            this.btnDelete.Text = "Supprimer";
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnUpdae
-            // 
-            this.btnUpdae.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnUpdae.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnUpdae.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdae.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdae.Image")));
-            this.btnUpdae.Location = new System.Drawing.Point(313, 437);
-            this.btnUpdae.Name = "btnUpdae";
-            this.btnUpdae.Size = new System.Drawing.Size(120, 41);
-            this.btnUpdae.TabIndex = 25;
-            this.btnUpdae.Text = "Modifer";
-            this.btnUpdae.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUpdae.UseVisualStyleBackColor = false;
-            this.btnUpdae.Click += new System.EventHandler(this.btnUpdae_Click);
-            // 
-            // txtPictureContact
-            // 
-            this.txtPictureContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPictureContact.Location = new System.Drawing.Point(13, 302);
-            this.txtPictureContact.Name = "txtPictureContact";
-            this.txtPictureContact.Size = new System.Drawing.Size(160, 148);
-            this.txtPictureContact.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.txtPictureContact.TabIndex = 24;
-            this.txtPictureContact.TabStop = false;
             // 
             // label6
             // 
@@ -274,9 +197,103 @@
             this.txtID.Size = new System.Drawing.Size(80, 25);
             this.txtID.TabIndex = 28;
             // 
+            // btnUpload
+            // 
+            this.btnUpload.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnUpload.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Image = ((System.Drawing.Image)(resources.GetObject("btnUpload.Image")));
+            this.btnUpload.Location = new System.Drawing.Point(13, 456);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(160, 42);
+            this.btnUpload.TabIndex = 27;
+            this.btnUpload.Text = "  Parcourir ...";
+            this.btnUpload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Bisque;
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(470, 437);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(132, 41);
+            this.btnDelete.TabIndex = 26;
+            this.btnDelete.Text = "Supprimer";
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdae
+            // 
+            this.btnUpdae.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnUpdae.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnUpdae.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdae.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdae.Image")));
+            this.btnUpdae.Location = new System.Drawing.Point(313, 437);
+            this.btnUpdae.Name = "btnUpdae";
+            this.btnUpdae.Size = new System.Drawing.Size(120, 41);
+            this.btnUpdae.TabIndex = 25;
+            this.btnUpdae.Text = "Modifer";
+            this.btnUpdae.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdae.UseVisualStyleBackColor = false;
+            this.btnUpdae.Click += new System.EventHandler(this.btnUpdae_Click);
+            // 
+            // txtPictureContact
+            // 
+            this.txtPictureContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPictureContact.Location = new System.Drawing.Point(13, 302);
+            this.txtPictureContact.Name = "txtPictureContact";
+            this.txtPictureContact.Size = new System.Drawing.Size(160, 148);
+            this.txtPictureContact.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.txtPictureContact.TabIndex = 24;
+            this.txtPictureContact.TabStop = false;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(165, 47);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(44, 31);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.Location = new System.Drawing.Point(587, 37);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(146, 41);
+            this.btnPrint.TabIndex = 30;
+            this.btnPrint.Text = "Imprimer";
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // frmListContact
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnUpload);
@@ -304,9 +321,9 @@
             this.Name = "frmListContact";
             this.Size = new System.Drawing.Size(742, 600);
             this.Load += new System.EventHandler(this.frmListContact_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPictureContact)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,5 +353,6 @@
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button btnPrint;
     }
 }
