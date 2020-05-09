@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppConatct.WinForms", "AppConatct.WinForms\AppConatct.WinForms.csproj", "{3DC925A0-9A5F-48B2-9D3D-2516B8341DF5}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EContacts Setup", "EContacts Setup\EContacts Setup.vdproj", "{C850AAC1-15B6-4B69-A9FE-BF1FE2329317}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{3DC925A0-9A5F-48B2-9D3D-2516B8341DF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DC925A0-9A5F-48B2-9D3D-2516B8341DF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DC925A0-9A5F-48B2-9D3D-2516B8341DF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C850AAC1-15B6-4B69-A9FE-BF1FE2329317}.Debug|Any CPU.ActiveCfg = Debug
+		{C850AAC1-15B6-4B69-A9FE-BF1FE2329317}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

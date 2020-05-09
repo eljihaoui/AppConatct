@@ -163,5 +163,24 @@ namespace AppConatct.WinForms
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReportDataSource rs = new ReportDataSource();
+            rs.Name = "DataSet1";
+            rs.Value = DBContact.SearchConatct(txtSearch.Text);
+            frmPrint frm = new frmPrint();
+            frm.Rpv.LocalReport.DataSources.Clear();
+            frm.Rpv.LocalReport.DataSources.Add(rs);
+            frm.Rpv.LocalReport.ReportEmbeddedResource = "AppConatct.WinForms.FicheContact.rdlc";
+            // frm.Rpv.LocalReport.ReportEmbeddedResource = "AppConatct.WinForms.Fiche.rdlc";
+
+            frm.Rpv.Dock = DockStyle.Fill;
+            frm.Controls.Add(frm.Rpv);
+            frm.Rpv.RefreshReport();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.ShowDialog();
+        }
     }
 }

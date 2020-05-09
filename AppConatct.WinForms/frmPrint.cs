@@ -16,5 +16,10 @@ namespace AppConatct.WinForms
         {
             InitializeComponent();
         }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
